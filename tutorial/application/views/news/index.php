@@ -8,4 +8,7 @@
     </div>
     <p><a href="<?php echo site_url('news/' . $news_item['slug']); ?>">詳細</a></p>
 
-<?php endforeach;
+<?php endforeach; ?>
+
+<p><a href="news/create" style="font-size:20px;">ニュースを投稿する</a></p>
+<p><a href="../tutorial" style="font-size:20px;">ホームに戻る</a></p>

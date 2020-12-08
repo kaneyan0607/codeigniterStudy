@@ -17,7 +17,7 @@ class News extends CI_Controller
     //概要ページ
     public function index()
     {
-        //引数を指定せずに全ニュースをモデル経由うで連想配列として取得する。
+        //引数を指定せずに全ニュースをモデル経由で連想配列として取得する。
         $data['news'] = $this->news_model->get_news();
 
         $data['title'] = 'News archive';

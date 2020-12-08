@@ -25,3 +25,5 @@ echo form_open('news/create');
 <input type="submit" name="submit" value="送信" />
 
 </form>
+
+<p><a href="../news">ニュースの記事一覧</a></p>
