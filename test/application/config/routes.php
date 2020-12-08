@@ -49,16 +49,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+// $route['default_controller'] = 'welcome';
+// $route['404_override'] = '';
+// $route['translate_uri_dashes'] = FALSE;
 
 // http://localhost:8888/codeigniterStudy/test/news/tutorial ←こんな感じで間にviewと入れなくても行けるようになる。ルーティング設定
-/* 1 */
+// /* 1 */
+// $route['news/(:any)'] = 'news/view/$1';
+// /* 2 */
+// $route['news'] = 'news';
+// /* 3 */
+// $route['(:any)'] = 'pages/show/$1';
+// /* 4 */
+// $route['default_controller'] = 'pages/show';
+$route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
-/* 2 */
 $route['news'] = 'news';
-/* 3 */
 $route['(:any)'] = 'pages/show/$1';
-/* 4 */
 $route['default_controller'] = 'pages/show';

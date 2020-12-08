@@ -43,4 +43,31 @@ class News extends CI_Controller
         $this->load->view('news/view', $data);
         $this->load->view('templates/footer');
     }
+
+    // 入力フォームのコントローラー
+    public function create()
+    {
+        //フォームヘルパーとフォームバリデーションライブラリをロードする。
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+
+        $data['title'] = "Crate a news item";
+
+        //titleとtextを必須入力requiredに設定する
+        $this->form_validation->set_rules('title', 'Title', 'required');
+        $this->form_validation->set_rules('text', 'Text', 'required');
+
+        if ($this->form_validation->run() === FALSE) {
+
+            //submit前や、不正な入力のときはフォームを表示する。
+            $this->load->view('templates/header', $data);
+            $this->load->view('news/create');
+            $this->load->view('templates/footer');
+        } else {
+
+            //正しく入力されたら成功ページを表示する
+            $this->news_model->set_news();
+            $this->load->view('news/success');
+        }
+    }
 }
