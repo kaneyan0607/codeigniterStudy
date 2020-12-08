@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -74,19 +74,20 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
+	// 'dsn'	=> 'mysql:host=localhost:8889;dbname=news_db;charset=utf8',
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root@localhost',
-	'password' => '',
-	'database' => 'test',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'news_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
+	'char_set' => 'utf8mb4',
+	'dbcollat' => 'utf8mb4_general_ci',
 	'swap_pre' => '',
 	'encrypt' => FALSE,
 	'compress' => FALSE,
