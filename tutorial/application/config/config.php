@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8888/codeigniterStudy/tutorial/';
+$config['base_url'] = 'http://localhost:80/codeigniterStudy/tutorial/';
 
 /*
 |--------------------------------------------------------------------------
